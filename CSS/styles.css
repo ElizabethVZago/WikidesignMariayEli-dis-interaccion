@@ -101,6 +101,9 @@ body {
     background: transparent;
 }
 
+
+
+
 .sidebar > details.sidebar-section {
     position: relative;
     height: auto;
@@ -535,4 +538,90 @@ html {
 
 .search-input::placeholder {
     color: rgba(255, 255, 255, 0.7); 
+}
+
+.sidebar > details.menu-temas > nav {
+    padding: 0 13px 28px;
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+.sidebar > details.menu-temas > nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar > details.menu-temas .tema-item {
+    display: block;
+    margin: 0 0 5px;
+    padding: 0;
+    background: transparent;
+    color: #7D8C46;
+}
+.sidebar > details.menu-temas .tema-item:hover,
+.sidebar > details.menu-temas .tema-item:focus-within,
+.sidebar > details.menu-temas .tema-item.abierto {
+    background: transparent;
+    color: #7D8C46;
+}
+.sidebar > details.menu-temas .tema-boton {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    padding: 9px 10px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    font: 700 11px/1.5 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.sidebar > details.menu-temas .tema-boton:hover,
+.sidebar > details.menu-temas .tema-boton[aria-expanded="true"] {
+    background: #1A1C40;
+    color: white;
+}
+.sidebar > details.menu-temas .tema-boton:focus-visible,
+.sidebar > details.menu-temas .parejas a:focus-visible {
+    outline: 2px solid #AFC653;
+    outline-offset: 2px;
+}
+.sidebar > details.menu-temas .icono-tema {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    object-fit: contain;
+}
+.sidebar > details.menu-temas .parejas {
+    display: none;
+    list-style: none;
+    padding: 5px 0 7px 18px;
+    margin: 0;
+}
+.sidebar > details.menu-temas .tema-item.abierto > .parejas {
+    display: block;
+}
+.sidebar > details.menu-temas .parejas li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+.sidebar > details.menu-temas .parejas li:hover {
+    background: transparent;
+}
+.sidebar > details.menu-temas .parejas a {
+    display: block;
+    padding: 6px 4px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font: 400 11px/1.45 'Open Sans', sans-serif;
+    overflow-wrap: anywhere;
+}
+.sidebar > details.menu-temas .parejas a:hover {
+    color: #D9D9D9;
+    text-decoration: underline;
 }

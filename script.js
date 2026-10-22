@@ -29,3 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+document.querySelectorAll('.menu-temas .tema-boton').forEach((boton) => {
+    boton.addEventListener('click', () => {
+        const item = boton.closest('.tema-item');
+        const estabaAbierto = item.classList.contains('abierto');
+
+        document.querySelectorAll('.menu-temas .tema-item.abierto').forEach((otro) => {
+            otro.classList.remove('abierto');
+            otro.querySelector('.tema-boton').setAttribute('aria-expanded', 'false');
+        });
+
+        if (!estabaAbierto) {
+            item.classList.add('abierto');
+            boton.setAttribute('aria-expanded', 'true');
+        }
+    });
+});
